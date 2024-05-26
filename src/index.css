@@ -1,0 +1,156 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Rubber band animation */
+@keyframes rubber-band {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.25);
+  }
+  40% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  65% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply rubber band animation to elements with .rubberband class */
+.rubberband {
+  animation: rubber-band 1s ease-in-out;
+}
+
+/* Zezzz animation for shoes */
+/* index.css */
+@keyframes zezzz {
+  0%, 10% {
+    background-position: -200px;
+  }
+  20% {
+    background-position: top left;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
+
+/* Apply shine effect to text with .shine-text class */
+.shine-text {
+  @apply bg-gradient-to-r from-[#201658] opacity-100 to-blue-400 via-orange-600 bg-clip-text text-transparent;
+  background-size: 200px;
+  animation: zezzz 4s infinite;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 3z0s linear infinite;
+}
+
+/* FadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* SlideIn animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Apply fadeIn animation */
+.fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Apply slideIn animation */
+.slideIn {
+  animation: slideIn 1s ease forwards;
+}
+
+@media (min-width: 640px) {
+  .md\:overflow-x-hidden {
+    overflow-x: hidden;
+  }
+}
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #15444b;
+  display: inline-block;
+  margin: 0;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  border-bottom: solid 1px #000000;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
+}
+
+.nav-link.fromRight:after {
+  transform-origin: 100% 50%;
+}
+
+.nav-link.fromLeft:after {
+  transform-origin: 0% 50%;
+}
+
+/* index.css or create a new CSS file for tailwind styles */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border-top-color: #3498db;
+  animation: spin 1s infinite linear;
+}
