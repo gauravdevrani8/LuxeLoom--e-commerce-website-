@@ -6,7 +6,7 @@ Welcome to **LuxeLoom**, the elegant and feature-rich e-commerce platform design
 
 ### Homepage
 
-![Homepage](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/22194800-d790-496c-a812-36d1c203325e)
+![Screenshot 2024-06-01 105214](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/71d24f3a-2237-420b-b712-681167ade6d0)
 
 ### Product Page
 
