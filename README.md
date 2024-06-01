@@ -2,10 +2,23 @@
 
 Welcome to **LuxeLoom**, the elegant and feature-rich e-commerce platform designed for seamless buying and selling experiences. This repository houses the source code for the LuxeLoom website, crafted with modern technologies to provide a dynamic and user-friendly shopping experience.
 
-![Screenshot 2024-05-27 093740](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/22194800-d790-496c-a812-36d1c203325e)
-![Screenshot 2024-05-27 093818](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/032b4d4c-b2c2-46b4-bd81-3fd1a4c784a7)
-![Screenshot 2024-05-27 093948](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/6f0b52a0-b558-4aa9-8f66-99423aeaae8d)
-![Screenshot 2024-05-27 094056](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/8bc5e188-c720-4899-a13e-3c6afa3ee1e9)
+## Screenshots
+
+### Homepage
+
+![Homepage](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/22194800-d790-496c-a812-36d1c203325e)
+
+### Product Page
+
+![Product Page](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/032b4d4c-b2c2-46b4-bd81-3fd1a4c784a7)
+
+### Shopping Cart
+
+![Shopping Cart](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/6f0b52a0-b558-4aa9-8f66-99423aeaae8d)
+
+### Checkout Page
+
+![Checkout Page](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/8bc5e188-c720-4899-a13e-3c6afa3ee1e9)
 
 
 ## **Technologies Used**
