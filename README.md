@@ -12,11 +12,11 @@ Welcome to **LuxeLoom**, the elegant and feature-rich e-commerce platform design
 
 ![Product Page](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/032b4d4c-b2c2-46b4-bd81-3fd1a4c784a7)
 
-### Shopping Cart
+### Authentication
 
 ![Shopping Cart](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/6f0b52a0-b558-4aa9-8f66-99423aeaae8d)
 
-### Checkout Page
+### Dashboard for Admin
 
 ![Checkout Page](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/8bc5e188-c720-4899-a13e-3c6afa3ee1e9)
 
