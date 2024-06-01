@@ -2,6 +2,9 @@
 
 Welcome to **LuxeLoom**, the elegant and feature-rich e-commerce platform designed for seamless buying and selling experiences. This repository houses the source code for the LuxeLoom website, crafted with modern technologies to provide a dynamic and user-friendly shopping experience.
 
+![Screenshot 2024-05-05 094708](https://github.com/gauravdevrani8/LuxeLoom-e-commerce-website/assets/151192508/7c688902-82fa-4afc-b7b5-724d193c4c14)
+
+
 ## **Technologies Used**
 
 - **React**: JavaScript library for building dynamic user interfaces.
