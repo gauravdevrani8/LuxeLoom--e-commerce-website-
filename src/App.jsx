@@ -9,7 +9,6 @@ import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Pages/Registration/Login";
 import Signup from "./Pages/Registration/Signup";
-import SingleProduct from "./Pages/SingleProduct/SingleProduct";
 import Dashboard from "./Pages/Admin/Dashboard";
 import AddProducts from "./Pages/Admin/AddProducts";
 import UpdateProducts from "./Pages/Admin/UpdateProducts";
@@ -19,6 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Offers from "./Pages/Offers/Offers";
 import ProductInfo from "./Pages/Productinfo/Productinfo";
 import Allproducts from "./Pages/AllProducts";
+import Prime from "./Components/Prime/Prime";
 const App = () => {
 
   return (
@@ -30,6 +30,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/allproducts" element={<Allproducts />} />
+              <Route path="/prime" element={<Prime/>} />
               <Route
                 path="/offers"
                 element={
@@ -67,7 +68,6 @@ const App = () => {
                   </ProtectedRouteForAdmin>
                 }
               />
-              <Route path="/singleproduct/:id" element={<SingleProduct />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
             <Footer />

@@ -11,7 +11,6 @@ import Filter from '../../Components/Filter/Filter';
 import ProductCard from '../../Components/Products/Products';
 import Testimonial from '../../Components/Testimonials/Testimonial';
 import Gallery from '../../Components/Gallery';
-import backgroundImage from '../../assets/background.jpg';
 import MoreProducts from '../../Components/MoreProducts';
 
 
@@ -30,7 +29,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [banners.length]);
 
-  // Preload images
+
   useEffect(() => {
     banners.forEach(image => {
       const img = new Image();
@@ -38,7 +37,6 @@ const Home = () => {
     });
   }, [banners]);
 
-  // Lazy load images
   useEffect(() => {
     const handleScroll = () => {
       const rect = bannerRef.current.getBoundingClientRect();
@@ -71,7 +69,7 @@ const Home = () => {
           className="w-full h-70 md:h-[83vh] transition-opacity object-cover  duration-500 ease-in-out"
           style={{ opacity: 1, objectPosition: 'top' }}
         />
-        <div className="absolute inset-0 flex justify-start items-baseline  bg-opacity-50 bg-black">
+        <div className="absolute inset-0 flex justify-start items-baseline  bg-opacity-40 bg-black">
           <div className="text-start mx-5 mt-10 text-white">
             <h1 className="text-sm md:text-4xl font-bold mb-4 ">Welcome to <span className="font-semibold  font-script text-green-300">"LuxeLoom" </span></h1>
             <p className="hidden md:block md:text-sm mb-6">Discover a wide range of products at great prices.</p>
@@ -83,7 +81,7 @@ const Home = () => {
         </div>
         
       </div>
-<div className='p-1 mb-5'style={{backgroundImage: `url(${backgroundImage})`}}>
+<div className='p-1 mb-5'>
       <Filter/>
       <ProductCard/>
       </div>

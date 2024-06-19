@@ -93,7 +93,7 @@ const cartItems = useSelector((state) => state.cart);
           }
           
         </ul>
-<div className="flex drop-shadow-lg ">
+<div className="flex ">
         {/* Search */}
         <div className="relative  hidden md:w-80 md:flex items-center">
           <input

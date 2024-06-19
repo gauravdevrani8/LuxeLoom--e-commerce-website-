@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SubNavBar = () => {
   return (
-    <nav className="bg-[#000000] h-fit text-white overflow-x-auto md:overflow-x-hidden">
+    <nav className="bg-[#000000] drop-shadow-lg h-fit text-white overflow-x-auto md:overflow-x-hidden">
       <div className="max-w-full">
         <ul className="flex text-[0.6rem] md:text-[12px] md:py-2  flex-nowrap justify-evenly space-x-0 md:space-x-5 overflow-x-auto">
           <NavItem text="All" />
@@ -32,7 +33,13 @@ const SubNavBar = () => {
             <a href="#" className="hover:text-yellow-400">Download App</a>
           </li>
           <li className="px-2 md:px-5  relative h-fit transition duration-300">
-            <button className="border md:h-9 mt-2 md:m-0 hover:text-gray-900 px-2   hover:bg-gray-100 text-white hover:scale-90 transition duration-300">Get Prime</button>
+          <Link to="/prime">
+      <button 
+        className="border md:h-9 rounded-md mt-2 md:m-0 hover:text-gray-900 px-2 hover:bg-gray-100 text-white hover:scale-90 transition duration-300"
+      >
+        Get Prime
+      </button>
+    </Link>
           </li>
           {/* Add more list items here */}
         </ul>

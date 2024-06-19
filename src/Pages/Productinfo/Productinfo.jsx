@@ -46,11 +46,11 @@ function ProductInfo() {
     }, [cartItems]);
 
     return (
-        <section className="text-gray-600 body-font">
+        <section className="text-gray-600 rounded-md body-font">
             <div className="container  px-5 py-10 mx-auto">
                 {loading && <p><Loader/></p>}
                 {product && (
-                    <div className="flex border-2 border-gray-300 px-16 flex-col lg:flex-row items-center justify-center lg:justify-start">
+                    <div className="flex border-2 border-gray-300 rounded-md px-16 flex-col lg:flex-row items-center justify-center lg:justify-start">
                         <img
                             alt={product.title}
                             className="lg:w-1/3 lg:h-auto w-full object-cover hover:scale-105 duration-300 object-center rounded"
@@ -67,7 +67,7 @@ function ProductInfo() {
                                 <span className="title-font font-medium text-2xl text-gray-900">₹{product.price}</span>
                                 <button
                                     onClick={() => addProductToCart(product)}
-                                    className="flex text-gray-700 border-2 border-gray-400 py-2 px-6 focus:outline-none rounded"
+                                    className="flex text-gray-700 border-2 rounded-md  border-gray-400 py-2 px-6 focus:outline-none"
                                 >
                                     Add To Cart
                                 </button>

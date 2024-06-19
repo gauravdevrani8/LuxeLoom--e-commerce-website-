@@ -18,7 +18,7 @@ export default function Modal({ name, address, pincode, phoneNumber, setName, se
                 <button
                     type="button"
                     onClick={openModal}
-                    className="w-full py-2 text-gray-600 border-2 border-gray-400 p-1"
+                    className="w-full py-2 px-3 text-gray-600 border-2 rounded-md border-gray-400 p-1"
                 >
                     Buy Now
                 </button>

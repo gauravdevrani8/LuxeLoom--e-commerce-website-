@@ -3,7 +3,6 @@ import myContext from "../Context/MyContext";
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { addToCart } from "../../Redux/CartSlice";
-import backgroundImage from '../../assets/background.jpg'; // Import your background image
 
 
 
@@ -17,14 +16,14 @@ function ProductCard() {
     dispatch(addToCart(product));
     toast.success("Added to cart", {
       position: "top-right",
-      autoClose: 1000, // duration in milliseconds
+      autoClose: 1000, 
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
       style: {
-        backgroundColor: '#fafafa', // green background
+        backgroundColor: '#fafafa', 
         color: 'gray',
         fontSize: '16px',
       },
@@ -51,15 +50,15 @@ function ProductCard() {
             <div
               key={item.id}
               
-              className="bg-white cursor-pointer h-auto w-full border-2 hover:border-gray-400 duration-700 border-gray-300 p-4"style={{backgroundImage: `url(${backgroundImage})`}}
+              className="bg-white cursor-pointer h-auto w-full border rounded-md  hover:border-gray-400 duration-700 border-gray-300 p-4"
               onClick={() => (window.location.href = `/productinfo/${item.id}`)}
             >
-              <img src={item.imageUrl} alt={item.title} className="w-full h-auto hover:scale-110 duration-700 object-cover mb-4" />
+              <img src={item.imageUrl} alt={item.title} className="w-full rounded-md h-auto hover:scale-110 duration-700 object-cover mb-4" />
               <h2 className="text-md font-semibold mb-2">{item.title}</h2>
               <p className="text-sm text-gray-700 mb-2">{item.category}</p>
               <p className="text-sm text-gray-700 mb-4">${item.price}</p>
               <button
-                className="focus:outline-none hover:border-gray-400 duration-700 text-gray-700 border-2 hover:scale-90 hover:duration-300 font-medium text-sm px-4 py-2.5"
+                className="focus:outline-none hover:border-gray-400 rounded-md duration-700 text-gray-700 border hover:scale-90 hover:duration-300 font-medium text-sm px-4 py-2.5"
                 onClick={(e) => {
                   e.stopPropagation();
                   addCart(item);
