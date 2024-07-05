@@ -30,7 +30,7 @@ const Navbar = () => {
   const cartItems = useSelector((state) => state.cart);
   return (
     <div className=" mx-auto bg-white text-xs border-b sticky top-0 z-50">
-      <div className="flex text-md bg-green-800 md:h-8 text-white font-montserrat md:px-16 justify-end items-center">
+      <div className="flex text-md bg-green-800 md:h-8 h-7 text-white font-montserrat md:px-16 justify-end items-center">
         {!user ? (
           <>
             <h2 className="absolute hidden md:block left-[41%] font-cinzel text-[1.1rem] top-2">
@@ -57,7 +57,7 @@ const Navbar = () => {
           </p>
         )}
       </div>
-      <div className="container bg-white px-2 md:px-4 max-w-screen-2xl h-10 md:h-24 flex justify-between items-center">
+      <div className="container bg-white px-2 md:px-4 max-w-screen-2xl h-14 md:h-24 flex justify-between items-center">
         <ul className="hidden md:hidden font-normal font-league-spartan lg:flex text-black text-[0.9rem] gap-x-14  py-2 ">
           <li className=" nav-item">
             <Link
