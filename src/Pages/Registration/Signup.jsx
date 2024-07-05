@@ -71,8 +71,8 @@ function Signup() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-gray-800">
       {Loading && <Loader />}
-      <div className="flex bg-white shadow-md rounded-md overflow-hidden max-w-4xl w-full">
-        <div className="hidden md:block md:w-1/2">
+      <div className="flex flex-wrap bg-white shadow-md rounded-md overflow-hidden max-w-4xl w-full">
+        <div className="w-full md:w-1/2">
           <img src={loginImage} alt="Login" className="object-cover w-full h-full" />
         </div>
         <div className="w-full md:w-1/2 p-8">

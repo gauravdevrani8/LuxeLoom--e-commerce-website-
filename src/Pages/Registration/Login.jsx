@@ -39,16 +39,16 @@ function Login() {
 
   return (
     <>
-      <div className="flex justify-center w-full bg-gray-100 items-center h-screen">
-        <div className="flex w-full max-w-4xl  bg-white  overflow-hidden">
-          <div className="w-1/2">
+      <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white overflow-hidden shadow-lg">
+          <div className="w-full md:w-1/2">
             <img src={loginImage} alt="Login" className="object-cover w-full h-full" />
           </div>
-          <div className="w-1/2 p-8">
+          <div className="w-full md:w-1/2 p-8">
             <h1 className="text-3xl font-semibold text-center font-caveat text-gray-800">Welcome back to Luxe Loom</h1>
             <form onSubmit={signin} className="mt-4">
               <div className="mb-4">
-                <label htmlFor="email" className="block text-sm font-medium  text-gray-700">Email Address</label>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
                 <input
                   type="email"
                   id="email"

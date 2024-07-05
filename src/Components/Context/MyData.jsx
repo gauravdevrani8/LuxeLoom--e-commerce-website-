@@ -14,7 +14,6 @@ import {
 } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { fireDB } from "../../Firebase/FirebaseConfig";
-import Loader from "../Loader/Loader";
 
 const MyData = ({ children }) => {
   const [loading, setLoading] = useState(false);

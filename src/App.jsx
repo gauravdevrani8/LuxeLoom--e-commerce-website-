@@ -95,7 +95,7 @@ const ProtectedRouteForAdmin = ({ children }) => {
   const admin = JSON.parse(localStorage.getItem('user'));
 
   // Check if admin is defined and has the email property
-  if (admin && admin.email === 'testuser@gmail.com') {
+  if (admin && admin.email === 'admin08@gmail.com') {
     return children;
   } else {
     return <Navigate to={'/login'} />;

@@ -5,16 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Poppins', 'ui-sans-serif', 'system-ui'],
-        'script': ['Dancing Script', 'cursive'],
-        'serif': ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
-        'pacifico': ['Pacifico', 'cursive'],
-        'robotoFlex': ['Roboto Flex', 'sans-serif'],
-        'serif-display': ['Noto Serif Display', 'serif'],
-        'genos': ['Genos', 'sans-serif'],
-        'caveat': ['Caveat', 'cursive'],
-        'montserrat': ['Montserrat', 'sans-serif'],
-        'quicksand': ['Quicksand', 'sans-serif'],
+        'cinzel': ['Cinzel', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+        'league-spartan': ['League Spartan', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif'],
+        'poiret': ['Poiret One', 'sans-serif'],
+
 
 
         

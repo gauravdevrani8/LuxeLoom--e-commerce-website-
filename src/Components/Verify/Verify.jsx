@@ -14,11 +14,11 @@ export default function Modal({ name, address, pincode, phoneNumber, setName, se
 
     return (
         <>
-            <div className="text-center rounded-lg text-white">
+            <div className="text-center w-full  text-white">
                 <button
                     type="button"
                     onClick={openModal}
-                    className="w-full py-2 px-3 text-gray-600 border-2 rounded-md border-gray-400 p-1"
+                    className="w-full py-3 px-8 text-gray-600 border-2 border-gray-400 p-1"
                 >
                     Buy Now
                 </button>

@@ -15,13 +15,13 @@ const Mygift = () => {
   };
 
   return (
-    <div className='bg-gray-100 rounded-full'>
+    <div className=' rounded'>
       <Lottie 
         options={defaultOptions}
         // height={400} // Adjust height as needed
         // width={400}
          // Adjust width as needed
-         className='w-52 h-52'
+         className='w-60 h-60'
       />
     </div>
   );

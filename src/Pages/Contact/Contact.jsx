@@ -1,9 +1,9 @@
 import React from 'react';
+import FaqSection from '../../Components/FAQ';
 
 const ContactPage = () => {
-  return (
-    <div className="container mx-auto px-10 py-8">
-      <h1 className="text-4xl  font-semi-bold font-caveat text-center mb-20">Contact <span className='text-green-300'>Us</span></h1>
+  return (<>
+    <div className="container font-league-spartan mx-auto px-10 py-8">
       
       <div className="flex   border p-5 flex-wrap flex-row justify-center">
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
@@ -84,6 +84,8 @@ const ContactPage = () => {
         </div>
       </div>
     </div>
+          <FaqSection/>
+</>
   );
 };
 

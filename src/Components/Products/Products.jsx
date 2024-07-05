@@ -4,8 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { addToCart } from "../../Redux/CartSlice";
 
-
-
 function ProductCard() {
   const context = useContext(myContext);
   const { product, searchkey, filterType, filterPrice } = context;
@@ -16,16 +14,16 @@ function ProductCard() {
     dispatch(addToCart(product));
     toast.success("Added to cart", {
       position: "top-right",
-      autoClose: 1000, 
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
       style: {
-        backgroundColor: '#fafafa', 
-        color: 'gray',
-        fontSize: '16px',
+        backgroundColor: "#fafafa",
+        color: "gray",
+        fontSize: "16px",
       },
       icon: "🛒", // custom icon
     });
@@ -41,24 +39,29 @@ function ProductCard() {
     .filter((obj) => !filterPrice || obj.price === filterPrice);
 
   return (
-    <div className="container mx-auto px-4 mt-5" >
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="container mx-auto px-4 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {filteredProducts.length === 0 ? (
-          <p>No products found.</p>
+          <p className="col-span-full text-center">No products found.</p>
         ) : (
           filteredProducts.map((item) => (
             <div
               key={item.id}
-              
-              className="bg-white cursor-pointer h-auto w-full border rounded-md  hover:border-gray-400 duration-700 border-gray-300 p-4"
+              className="bg-white max-w-xs sm:max-w-sm md:max-w-none cursor-pointer h-auto rounded-md  hover:border-gray-400 duration-700 p-4"
               onClick={() => (window.location.href = `/productinfo/${item.id}`)}
             >
-              <img src={item.imageUrl} alt={item.title} className="w-full rounded-md h-auto hover:scale-110 duration-700 object-cover mb-4" />
+              <div className="aspect-w-2 aspect-h-2 mb-4 overflow-hidden rounded-md">
+                <img
+                  src={item.imageUrl}
+                  alt={item.title}
+                  className="object-cover w-full h-full transform hover:scale-105 duration-700"
+                />
+              </div>
               <h2 className="text-md font-semibold mb-2">{item.title}</h2>
               <p className="text-sm text-gray-700 mb-2">{item.category}</p>
-              <p className="text-sm text-gray-700 mb-4">${item.price}</p>
+              <p className="text-sm text-gray-700 mb-4">₹{item.price}</p>
               <button
-                className="focus:outline-none hover:border-gray-400 rounded-md duration-700 text-gray-700 border hover:scale-90 hover:duration-300 font-medium text-sm px-4 py-2.5"
+                className="focus:outline-none bg-green-800 hover:bg-green-700 text-white border border-green-800 hover:border-green-700  py-2 px-7 hover:scale-90 hover:duration-300 font-medium text-sm"
                 onClick={(e) => {
                   e.stopPropagation();
                   addCart(item);
@@ -69,8 +72,6 @@ function ProductCard() {
             </div>
           ))
         )}
-      </div>
-      <div className="m-10">
       </div>
     </div>
   );

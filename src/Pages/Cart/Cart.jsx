@@ -4,10 +4,9 @@ import myContext from "../../Components/Context/MyContext";
 import Modal from "../../Components/Verify/Verify";
 import { MdDeleteOutline } from "react-icons/md";
 import { deleteFromCart } from "../../Redux/CartSlice";
-import { collection } from "firebase/firestore";
 
 function Cart() {
-  const {} = useContext(myContext);
+  const {} = useContext(myContext); // Replace with your context if needed
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -19,7 +18,7 @@ function Cart() {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const [totalAmout, setTotalAmount] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   useEffect(() => {
     let temp = 0;
@@ -29,68 +28,69 @@ function Cart() {
     setTotalAmount(temp);
   }, [cartItems]);
 
-  const shipping = parseInt(0);
+  const shipping = parseInt(100); // Example shipping cost
 
-  const grandTotal = shipping + totalAmout;
+  const grandTotal = shipping + totalAmount;
 
   return (
-    <div className="min-h-screen flex  font-normal justify-center items-center px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl w-full bg-white m-5 border-2 rounded-lg flex flex-col sm:flex-row">
-        <div className="flex-1 border-r border-gray-200">
-          <h1 className=" text-lg md:text-2xl font-semibold  text-gray-700 p-8 border-b border-gray-200">
-            Your Cart
-          </h1>
-          <div className="p-1">
-            {cartItems.map((item, index) => (
-              <div
-                key={index}
-                className="flex items-center text-md border-b m-10 border-gray-200 py-4"
-              >
+    <div className="min-h-screen font-league-spartan bg-gray-100 py-12 px-4 sm:px-6 lg:px-">
+      <div className="max-w-screen  bg-white rounded-lg shadow-lg overflow-hidden">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 bg-gray-200 py-6 px-8 border-b border-gray-300">
+          Cart Products
+        </h1>
+        <div className="p-6 md:p-8">
+          {cartItems.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-between border-b border-gray-200 py-4"
+            >
+              <div className="flex items-center space-x-4">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className="w-24 h-24 object-contain rounded-lg mr-6"
+                  className="w-20 h-20 object-contain rounded-lg shadow-md"
                 />
-                <div className="flex-1">
-                  <h2 className=" text-sm md:text-lg font-semibold text-gray-900">
+                <div>
+                  <h2 className="text-lg font-semibold text-gray-900">
                     {item.title}
                   </h2>
                   <p className="text-sm text-gray-700">{item.description}</p>
-                  <p className="mt-1 text-xs font-semibold text-gray-700">
+                  <p className="text-sm font-semibold text-gray-700">
                     Price: ₹{item.price}
                   </p>
                 </div>
-                <button
-                  onClick={() => deleteCart(item)}
-                  className="ml-auto focus:outline-none"
-                >
-                  <MdDeleteOutline className=" md:w-6 md:h-6 ml-4 text-gray-700" />
-                </button>
               </div>
-            ))}
-          </div>
+              <button
+                onClick={() => deleteCart(item)}
+                className="text-gray-700 hover:text-red-600 focus:outline-none"
+              >
+                <MdDeleteOutline className="w-6 h-6" />
+              </button>
+            </div>
+          ))}
         </div>
-        <div className="w-full sm:w-72 p-8">
-          <div className="bg-gray-100 p-6 rounded-lg">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        <div className="bg-gray-200 py-6 px-8">
+          <div className="flex justify-between items-center">
+            <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
               Order Summary
             </h2>
-            <div className="flex justify-between mb-2">
-              <p className="text-gray-700">₹{totalAmout}</p>
-              <p className="text-gray-700">₹100</p>
+            <p className="text-lg md:text-xl font-semibold text-gray-900">
+              Total: ₹{grandTotal}
+            </p>
+          </div>
+          <div className="flex justify-between mt-4">
+            <div className="text-gray-700">
+              <p>Subtotal:</p>
+              <p>Shipping:</p>
             </div>
-            <div className="flex justify-between mb-2">
-              <p className="text-gray-700">Shipping</p>
-              <p className="text-gray-700">₹{shipping}</p>
+            <div className="text-gray-700">
+              <p>₹{totalAmount}</p>
+              <p>₹{shipping}</p>
             </div>
-            <hr className="my-2 border-gray-300" />
-            <div className="flex justify-between">
-              <p className="text-lg font-bold">Total</p>
-              <p className="text-lg font-bold">₹{grandTotal}</p>
-            </div>
-            <div className="mt-6">
-              <Modal />
-            </div>
+          </div>
+          <hr className="my-4 border-gray-300" />
+          <div className="mt-4">
+            <Modal />
           </div>
         </div>
       </div>

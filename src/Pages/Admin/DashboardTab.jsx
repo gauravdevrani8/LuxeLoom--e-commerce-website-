@@ -31,14 +31,14 @@ function DashboardTab() {
   };
 
   return (
-    <div className="container mt-10 mx-auto">
+    <div className="container  font-league-spartan mt-10 mx-auto">
       <div className="tab container mx-auto">
         <Tabs defaultIndex={0} className="">
           <TabList className="md:flex md:space-x-8  grid grid-cols-3 text-center gap-4 p-2 md:justify-center mb-10">
             <Tab>
               <button
                 type="button"
-                className="font-medium bg-green-300 border-b-2 border-black  text-xl text-black px-5 py-1.5 text-center border-2"
+                className="font-medium bg-white border-b-2 border-gray-300  text-xl text-black px-5 py-1.5 text-center border-2"
                 onFocus={handleFocus}
               >
                 <div className="flex gap-2 items-center">
@@ -49,7 +49,7 @@ function DashboardTab() {
             <Tab>
               <button
                 type="button"
-                className="font-medium border-2 border-black text-xl px-5 py-1.5 text-center text-black"
+                className="font-medium border-2 border-gray-300 text-xl px-5 py-1.5 text-center text-black"
                 onFocus={handleFocus}
               >
                 <div className="flex gap-2 items-center">
@@ -69,7 +69,7 @@ function DashboardTab() {
                 <button
                   onClick={add}
                   type="button"
-                  className="focus:outline-none text-black bg-green-300 border hover:bg-pink-700 outline-0 font-medium  text-sm px-5 py-2.5 mb-2"
+                  className="focus:outline-none text-black bg-gray-400 border hover:bg-pink-700 outline-0 font-medium  text-sm px-6 py-3 mb-2"
                 >
                   <div className="flex gap-2 items-center">
                     Add Product <FaCartPlus size={20} />
@@ -109,7 +109,7 @@ function DashboardTab() {
                       return (
                         <tr
                           key={index}
-                          className="bg-white border-b dark:border-gray-700"
+                          className="bg-transparent border-b dark:border-gray-700"
                         >
                           <td className="px-6 py-4 text-black">{index + 1}</td>
                           <td className="px-6 py-4 font-medium text-black whitespace-nowrap">

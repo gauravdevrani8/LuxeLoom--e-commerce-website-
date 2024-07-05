@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const TrustedByCompaniesSection = () => {
-  return (
+  return (<>
     <section className=" dark:bg-gray-900">
 
     <div className=" mx-auto mb-24 max-w-screen-xl">
-        <h2 className="mb-8 lg:mb-16 text-3xl font-extrabold font-caveat tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-3xl">Trusted by<span className='text-green-500'>  500+ businesses</span></h2>
+        <h2 className=" mt-20 lg:mb-16 text-3xl font-extrabold font-poiret tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-3xl">Trusted by<span className='text-green-500'>  500+ businesses</span></h2>
         <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
             <a href="#" className="flex justify-center items-center">
                 <svg className="h-5 md:h-9 hover:text-gray-900 duration-700 dark:hover:text-white" viewBox="0 0 125 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -62,10 +62,23 @@ const TrustedByCompaniesSection = () => {
                     <path fillRule="evenodd" clipRule="evenodd" d="M116.336 9.00154C114.284 9.00154 113.49 10.2101 113.303 11.2646H119.396C119.27 10.2379 118.508 9.00154 116.336 9.00154ZM108.5 12.897C108.5 8.67447 111.712 5.26007 116.336 5.26007C120.709 5.26007 123.892 8.42807 123.892 13.3781V14.4385H113.368C113.704 15.7335 114.929 16.8218 117.067 16.8218C118.108 16.8218 119.821 16.3686 120.681 15.5839L122.725 18.6317C121.26 19.9267 118.81 20.5633 116.55 20.5633C111.991 20.5633 108.5 17.6358 108.5 12.897Z" fill="currentColor"/>
                 </svg>                                                                                    
             </a>
+            
         </div>
         
     </div>
 </section>
+<div className='flex justify-center mb-20 items-center'>
+
+<button className="bg-green-800 text-white py-3 px-7 hover:scale-105 duration-500">
+      <Link to="/contact">
+              Contact
+            </Link>
+      </button>
+      <button className="border border-gray-300 text-black py-3 px-7 ml-4 hover:scale-105 duration-500">
+        Preview
+      </button>
+      </div>
+</>
   );
 }
 

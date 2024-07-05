@@ -10,8 +10,8 @@ function Filter() {
     const uniquePrices = [...new Set(product.map(item => item.price))];
 
     return (
-        <div className='container mx-auto px-4 '>
-            <div className="p-5">
+        <div className="bg-cover bg-center" style={{ backgroundImage: `url(${backgroundImage})` }}>
+            <div className='container mx-auto px-4 py-8 font-cinzel'>
                 <div className="relative lg:hidden">
                     <div className="absolute flex items-center ml-2 h-full">
                         <svg className="w-4 h-4 fill-current text-primary-gray-dark" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ function Filter() {
                     />
                 </div>
                 <div className="flex items-center justify-between mt-2">
-                    <p className="font-medium">Filters</p>
+                    <p className="font-medium text-lg">Filters</p>
                     <button 
                         className="px-4 py-2 bg-gray-50 border-2 hover:bg-gray-200 text-gray-800 text-sm font-medium rounded-md"
                         onClick={() => {
@@ -50,7 +50,7 @@ function Filter() {
                         >
                             <option value="">All Categories</option>
                             {uniqueCategories.map((category, index) => (
-                                <option key={index} value={category}>{category}</option>
+                                <option className="bg-white rounded-none" key={index} value={category}>{category}</option>
                             ))}
                         </select>
                         <select
