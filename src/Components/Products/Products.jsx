@@ -25,7 +25,7 @@ function ProductCard() {
         color: "gray",
         fontSize: "16px",
       },
-      icon: "🛒", // custom icon
+      icon: "🛒",
     });
   };
 
@@ -40,17 +40,17 @@ function ProductCard() {
 
   return (
     <div className="container mx-auto px-4 mt-5">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
         {filteredProducts.length === 0 ? (
           <p className="col-span-full text-center">No products found.</p>
         ) : (
           filteredProducts.map((item) => (
             <div
               key={item.id}
-              className="bg-white max-w-xs sm:max-w-sm md:max-w-none cursor-pointer h-auto rounded-md  hover:border-gray-400 duration-700 p-4"
+              className="bg-white max-w-xs cursor-pointer h-auto  duration-700 p-4"
               onClick={() => (window.location.href = `/productinfo/${item.id}`)}
             >
-              <div className="aspect-w-2 aspect-h-2 mb-4 overflow-hidden rounded-md">
+              <div className="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-md">
                 <img
                   src={item.imageUrl}
                   alt={item.title}
@@ -61,7 +61,7 @@ function ProductCard() {
               <p className="text-sm text-gray-700 mb-2">{item.category}</p>
               <p className="text-sm text-gray-700 mb-4">₹{item.price}</p>
               <button
-                className="focus:outline-none bg-green-800 hover:bg-green-700 text-white border border-green-800 hover:border-green-700  py-2 px-7 hover:scale-90 hover:duration-300 font-medium text-sm"
+                className="focus:outline-none bg-green-800 hover:bg-green-700 text-white border border-green-800 hover:border-green-700 py-2 px-7 hover:scale-95 duration-300 font-medium text-sm"
                 onClick={(e) => {
                   e.stopPropagation();
                   addCart(item);

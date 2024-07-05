@@ -57,7 +57,7 @@ const Navbar = () => {
           </p>
         )}
       </div>
-      <div className="container bg-white px-2 md:px-4 max-w-screen-2xl h-14 md:h-24 flex justify-between items-center">
+      <div className="container bg-white px-2 md:px-4 max-w-screen-2xl h-16 md:h-24 flex justify-between items-center">
         <ul className="hidden md:hidden font-normal font-league-spartan lg:flex text-black text-[0.9rem] gap-x-14  py-2 ">
           <li className=" nav-item">
             <Link

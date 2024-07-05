@@ -11,6 +11,7 @@ import fallbackImage from '../../assets/fallback.png'; // Add your fallback imag
 
 const Home = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -20,24 +21,34 @@ const Home = () => {
     const videoElement = document.querySelector('video');
     videoElement.addEventListener('loadeddata', handleLoad);
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
     return () => {
       videoElement.removeEventListener('loadeddata', handleLoad);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
     <>
       <motion.div 
-        className={`relative h-40 md:h-[73vh] overflow-hidden ${videoLoaded ? 'video-loaded' : ''}`}
+        className={`relative h-60 md:h-[73vh] overflow-hidden ${videoLoaded ? 'video-loaded' : ''}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         <img src={fallbackImage} alt="Fallback" className="absolute inset-0 w-full h-full object-cover fallback-image" />
-        <video className="absolute inset-0 w-full h-full object-cover video-element" autoPlay loop muted>
-          <source src={bannerVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {!isMobile && (
+          <video className="absolute inset-0 w-full h-full object-cover video-element" autoPlay loop muted>
+            <source src={bannerVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
         <div className="absolute inset-0 flex justify-start items-center md:items-baseline bg-black bg-opacity-20 p-4 md:p-10">
           <motion.div 
             className="text-white"
@@ -45,7 +56,7 @@ const Home = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <h1 className="text-sm md:text-4xl font-bold mb-4">
+            <h1 className="text-2xl md:text-4xl font-bold mb-4">
               Welcome to <span className="font-bold font-poiret text-green-300">"LuxeLoom"</span>
             </h1>
             <p className="hidden md:block md:text-sm mb-6">
@@ -56,7 +67,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <p className="text-[0.7rem] font-light md:hidden">Explore</p>
+              <button className="text-[0.9rem] px-3 py-1 font-light md:hidden">Explore</button>
               <h1 className="hidden md:block text-xs md:text-sm">
                 Have A Tour Of Website!
               </h1>
