@@ -34,7 +34,7 @@ const FaqSection = () => {
   };
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-fit">
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{ backgroundImage: `url(${faqFallback})` }}

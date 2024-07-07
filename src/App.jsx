@@ -18,7 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Offers from "./Pages/Offers/Offers";
 import ProductInfo from "./Pages/Productinfo/Productinfo";
 import Allproducts from "./Pages/AllProducts";
-import Prime from "./Components/Prime/Prime";
+import GetPrime from "./Pages/Prime/Prime";
 const App = () => {
 
   return (
@@ -30,7 +30,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/allproducts" element={<Allproducts />} />
-              <Route path="/prime" element={<Prime/>} />
+              <Route path="/prime" element={<GetPrime/>} />
               <Route
                 path="/offers"
                 element={
@@ -60,6 +60,7 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/getprime" element={<GetPrime/>} />
               <Route
                 path="/dashboard"
                 element={

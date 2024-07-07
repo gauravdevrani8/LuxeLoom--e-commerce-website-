@@ -15,6 +15,7 @@ const Home = () => {
   const fallbackImageRef = useRef(null);
   const welcomeTextRef = useRef(null);
   const exploreButtonRef = useRef(null);
+  const additionalTextRef = useRef(null);
 
   useEffect(() => {
     const handleLoad = () => {
@@ -47,12 +48,17 @@ const Home = () => {
         { scale: 0.8, opacity: 0 },
         { scale: 1, opacity: 1, duration: 1, delay: 1.5 }
       );
+      gsap.fromTo(
+        additionalTextRef.current,
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1, delay: 2 }
+      );
     }
   }, [videoLoaded]);
 
   return (
     <>
-      <div className={`relative h-60 md:h-[73vh] overflow-hidden ${videoLoaded ? 'video-loaded' : ''}`}>
+      <div className={`relative h-60 md:h-[79vh] overflow-hidden ${videoLoaded ? 'video-loaded' : ''}`}>
         <img
           ref={fallbackImageRef}
           src={fallbackImage}
@@ -69,10 +75,10 @@ const Home = () => {
           <source src={bannerVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 flex justify-start items-center md:items-baseline bg-black bg-opacity-20 p-4 md:p-10">
+        <div className="absolute font-rowdies inset-0 flex justify-start items-center md:items-baseline bg-black bg-opacity-20 p-4 md:p-10">
           <div ref={welcomeTextRef} className="text-white">
             <h1 className="text-2xl md:text-4xl font-bold mb-4">
-              Welcome to <span className="font-bold font-poiret text-green-300">"LuxeLoom"</span>
+              Welcome to <span className="font-bold  text-green-100">"LuxeLoom"</span>
             </h1>
             <p className="hidden md:block md:text-sm mb-6">
               Discover a wide range of products at great prices.
@@ -86,6 +92,11 @@ const Home = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div ref={additionalTextRef} className="absolute  font-league-spartan bottom-4 right-4 text-white text-sm md:text-base p-2 bg-black bg-opacity-50">
+          <p>Discover, shop, and indulge in style with LuxeLoom - where fashion meets convenience.
+
+</p>
         </div>
       </div>
       <div className="p-1 mb-5">

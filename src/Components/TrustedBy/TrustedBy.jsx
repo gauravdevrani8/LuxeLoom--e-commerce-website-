@@ -5,7 +5,7 @@ const TrustedByCompaniesSection = () => {
     <section className=" dark:bg-gray-900">
 
     <div className=" mx-auto mb-24 md:block hidden max-w-screen-xl">
-        <h2 className=" mt-20 lg:mb-16 text-3xl font-extrabold font-poiret tracking-tight leading-tight text-center text-gray-900 dark:text-white md:text-3xl">Trusted by<span className='text-green-500'>  500+ businesses</span></h2>
+        <h2 className=" mt-20 lg:mb-16 text-3xl font-rowdies font-light tracking-tight leading-tight text-center text-gray-700 dark:text-white md:text-3xl">Trusted by<span className='text-green-500'>  500+ businesses</span></h2>
         <div className="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
             <a href="#" className="flex justify-center items-center">
                 <svg className="h-5 md:h-9 hover:text-gray-900 duration-700 dark:hover:text-white" viewBox="0 0 125 35" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

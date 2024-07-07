@@ -35,8 +35,8 @@ function Cart() {
   return (
     <div className="min-h-screen font-league-spartan bg-gray-100 py-12 px-4 sm:px-6 lg:px-">
       <div className="max-w-screen  bg-white rounded-lg shadow-lg overflow-hidden">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800 bg-gray-200 py-6 px-8 border-b border-gray-300">
-          Cart Products
+        <h1 className="text-3xl md:text-4xl font-rowdies text-gray-800 bg-gray-200 py-6 px-8 border-b border-gray-300">
+          Cart Items
         </h1>
         <div className="p-6 md:p-8">
           {cartItems.map((item, index) => (

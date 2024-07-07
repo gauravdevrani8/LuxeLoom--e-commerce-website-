@@ -38,7 +38,7 @@ const GalleryItem = ({ image, label, span = 1 }) => {
         alt={`Photo by ${label}`}
         className="object-cover object-center w-full h-64 md:h-80 transform transition-transform group-hover:scale-105 duration-300"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-blue-400 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-indigo-500 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       <div className="absolute inset-x-0 bottom-0 px-4 py-2 bg-gray-800 bg-opacity-5 text-white text-sm md:text-lg">
         <span className="">{label}</span>
       </div>

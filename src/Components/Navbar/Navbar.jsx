@@ -41,13 +41,13 @@ const Navbar = () => {
               to="/login"
               className="hover:text-green-500 transition-colors duration-300 mr-2 hover:scale-x-105"
             >
-              Login
+              LOGIN
             </Link>
             <Link
               to="/signup"
               className="hover:text-green-500 transition-colors duration-300 hover:scale-x-105"
             >
-              /Signup
+              /SIGNUP
             </Link>
           </>
         ) : (
@@ -58,13 +58,13 @@ const Navbar = () => {
         )}
       </div>
       <div className="container bg-white px-2 md:px-4 max-w-screen-2xl h-16 md:h-24 flex justify-between items-center">
-        <ul className="hidden md:hidden font-normal font-league-spartan lg:flex text-black text-[0.9rem] gap-x-14  py-2 ">
+        <ul className="hidden md:hidden font-montserrat lg:flex text-black text-[0.8rem] gap-x-14  py-2 ">
           <li className=" nav-item">
             <Link
               to="/"
               className={`nav-link hover:text-green-500  transition-colors duration-300`}
             >
-              Home
+              HOME
             </Link>
           </li>
           <li className="nav-item">
@@ -72,7 +72,7 @@ const Navbar = () => {
               to="/about"
               className={`nav-link hover:text-green-500 transition-colors duration-300`}
             >
-              About
+              ABOUT
             </Link>
           </li>
           <li className="nav-item">
@@ -80,7 +80,7 @@ const Navbar = () => {
               to="/allproducts"
               className={`nav-link hover:text-green-500 transition-colors duration-300`}
             >
-              All Products
+            PRODUCTS
             </Link>
           </li>
           <li className="nav-item">
@@ -88,7 +88,7 @@ const Navbar = () => {
               to="/contact"
               className={`nav-link hover:text-green-500 transition-colors duration-300`}
             >
-              Contact
+              CONTACT
             </Link>
           </li>
           {user && user.email === "admin08@gmail.com" && (
@@ -97,7 +97,7 @@ const Navbar = () => {
                 to="/dashboard"
                 className="nav-link hover:text-green-500 transition-colors duration-300"
               >
-                Admin
+                ADMIN
               </Link>
             </li>
           )}
@@ -110,7 +110,7 @@ const Navbar = () => {
             <GiImperialCrown className="mr-1 text-4xl" />{" "}
             {/* Adjust margin as needed */}
             <h1 className=" md:p-2 text-sm md:text-2xl font-bold font-league-spartan ">
-              Luxe
+              LUXE
               <span className="font-poiret border-2 px-2 py-1 border-gray-400  text-gray-800 ml-2 ">
                 Loom
               </span>
@@ -140,9 +140,13 @@ const Navbar = () => {
                 {cartItems.length}
               </span>
             </Link>
+            <Link
+              to="/getprime">
             <button className=" bg-green-800  hidden md:ml-5 md:block text-white font-bold py-3 px-4">
               Get Prime
             </button>
+            </Link>
+
           </div>
           {user && (
             <button
@@ -175,7 +179,7 @@ const Navbar = () => {
             <GiImperialCrown className="mr-1 text-4xl" />{" "}
             {/* Adjust margin as needed */}
             <h1 className=" md:p-2 text-sm md:text-2xl font-bold font-league-spartan ">
-              Luxe
+              LUXE
               <span className="font-poiret border-2 px-2 py-1 border-gray-400  text-gray-800 ml-2 ">
                 Loom
               </span>
@@ -195,7 +199,7 @@ const Navbar = () => {
                     to="/"
                     className="hover:text-green-500  transition-colors duration-300"
                   >
-                    Home
+                    HOME
                   </Link>
                 </li>
                 <li className="mb-4">
@@ -203,7 +207,7 @@ const Navbar = () => {
                     to="/about"
                     className="hover:text-green-500 transition-colors duration-300"
                   >
-                    About
+                    ABOUT
                   </Link>
                 </li>
                 <li className="mb-4">
@@ -211,7 +215,7 @@ const Navbar = () => {
                     to="/allproducts"
                     className="hover:text-green-500 transition-colors duration-300"
                   >
-                    AllProducts
+                    PRODUCTS
                   </Link>
                 </li>
 
@@ -220,7 +224,7 @@ const Navbar = () => {
                     to="/contact"
                     className=" hover:text-green-500 transition-colors duration-300"
                   >
-                    Contact
+                    CONTACT
                   </Link>
                 </li>
                 {user && user.email === "admin08@gmail.com" && (
@@ -229,7 +233,7 @@ const Navbar = () => {
                       to="/dashboard"
                       className=" text-white hover:text-green-500 transition-colors duration-300"
                     >
-                      Admin
+                      ADMIN
                     </Link>
                   </li>
                 )}

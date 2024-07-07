@@ -7,8 +7,11 @@ module.exports = {
       fontFamily: {
         'cinzel': ['Cinzel', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
         'league-spartan': ['League Spartan', 'sans-serif'],
+        'permanent-marker': ['Permanent Marker', 'sans-serif'],
         'roboto': ['Roboto', 'sans-serif'],
         'poiret': ['Poiret One', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif'],
+        'rowdies': ['Rowdies', 'sans-serif'],
 
 
 
