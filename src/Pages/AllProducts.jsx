@@ -48,7 +48,7 @@ function Allproducts() {
                 return (
                   <div
                     key={index}
-                    className="border border-gray-200 rounded-lg overflow-hidden flex flex-col justify-between"
+                    className="border border-gray-200 m-6 overflow-hidden flex flex-col justify-between"
                   >
                     <div
                       className="flex justify-center items-center cursor-pointer transform transition-transform duration-300 hover:scale-105"

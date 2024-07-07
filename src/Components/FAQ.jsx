@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import faqVideo from '../assets/faq.mp4';
+import faqFallback from '../assets/faqfallback.png';
 
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -34,10 +35,15 @@ const FaqSection = () => {
 
   return (
     <div className="relative w-full h-screen">
-      <video className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted>
-        <source src={faqVideo} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${faqFallback})` }}
+      >
+        <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
+          <source src={faqVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div className="relative z-10 p-8 h-screen text-white bg-black bg-opacity-0">
         <h1 className="text-4xl font-bold mb-4">FAQs</h1>
         <div className="space-y-4">

@@ -19,11 +19,11 @@ const Gallery = () => {
           <GalleryItem image="https://cb.scene7.com/is/image/Crate/CB_H23_MCB_24_204_Hor-Vert_001_v1?$web_pdp_main_carousel_med$" label="Home Decor" />
           <GalleryItem image="https://cb.scene7.com/is/image/Crate/XLBerryBoxWhiteSSS22?$web_pdp_main_carousel_med$" label="Fresh Fruits" />
         </div>
-        <div className="mt-8 text-center">
-          <Link to="/allproducts" className="inline-block px-6 py-3 bg-gray-800 text-white rounded-md hover:bg-gray-700 transition-colors duration-300">
+        <button className="mt-8 text-center">
+          <Link to="/allproducts" className="inline-block px-6 py-3 bg-green-800 text-white hover:scale-100 transition-colors hover:duration-300">
             View All Products
           </Link>
-        </div>
+        </button>
       </div>
     </div>
   );

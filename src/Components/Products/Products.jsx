@@ -36,7 +36,8 @@ function ProductCard() {
   const filteredProducts = product
     .filter((obj) => obj.title.toLowerCase().includes(searchkey.toLowerCase()))
     .filter((obj) => !filterType || obj.category === filterType)
-    .filter((obj) => !filterPrice || obj.price === filterPrice);
+    .filter((obj) => !filterPrice || obj.price === filterPrice)
+    .slice(0, 12); // Limit to 12 products
 
   return (
     <div className="container mx-auto px-4 mt-5">
@@ -47,7 +48,7 @@ function ProductCard() {
           filteredProducts.map((item) => (
             <div
               key={item.id}
-              className="bg-white max-w-xs cursor-pointer h-auto  duration-700 p-4"
+              className="bg-white max-w-xs w-full h-96 flex flex-col justify-between cursor-pointer duration-700 p-4"
               onClick={() => (window.location.href = `/productinfo/${item.id}`)}
             >
               <div className="aspect-w-1 aspect-h-1 mb-4 overflow-hidden rounded-md">
@@ -57,18 +58,20 @@ function ProductCard() {
                   className="object-cover w-full h-full transform hover:scale-105 duration-700"
                 />
               </div>
-              <h2 className="text-md font-semibold mb-2">{item.title}</h2>
-              <p className="text-sm text-gray-700 mb-2">{item.category}</p>
-              <p className="text-sm text-gray-700 mb-4">₹{item.price}</p>
-              <button
-                className="focus:outline-none bg-green-800 hover:bg-green-700 text-white border border-green-800 hover:border-green-700 py-2 px-7 hover:scale-95 duration-300 font-medium text-sm"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  addCart(item);
-                }}
-              >
-                Add to Cart
-              </button>
+              <div>
+                <h2 className="text-md font-semibold mb-2">{item.title}</h2>
+                <p className="text-sm text-gray-700 mb-2">{item.category}</p>
+                <p className="text-sm text-gray-700 mb-4">₹{item.price}</p>
+                <button
+                  className="focus:outline-none bg-green-800 hover:bg-green-700 text-white border border-green-800 hover:border-green-700 py-2 px-7 hover:scale-95 duration-300 font-medium text-sm"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    addCart(item);
+                  }}
+                >
+                  Add to Cart
+                </button>
+              </div>
             </div>
           ))
         )}
