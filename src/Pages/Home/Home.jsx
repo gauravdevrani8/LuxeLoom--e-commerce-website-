@@ -32,31 +32,30 @@ const Home = () => {
 
   useEffect(() => {
     if (videoLoaded) {
-      gsap.to(fallbackImageRef.current, { opacity: 0, duration: 1 });
+      gsap.to(fallbackImageRef.current, { opacity: 0, duration: 0.5, ease: "power2.out" });
       gsap.fromTo(
         videoRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 1, delay: 0.5 }
+        { opacity: 1, duration: 1, delay: 0.5, ease: "power2.inOut" }
       );
       gsap.fromTo(
         welcomeTextRef.current,
         { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, delay: 1 }
+        { x: 0, opacity: 1, duration: 1, delay: 1, ease: "power2.out" }
       );
       gsap.fromTo(
         exploreButtonRef.current,
         { scale: 0.8, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 1, delay: 1.5 }
+        { scale: 1, opacity: 1, duration: 1, delay: 1.5, ease: "power2.out" }
       );
       gsap.fromTo(
         additionalTextRef.current,
         { x: 100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, delay: 2 }
+        { x: 0, opacity: 1, duration: 1, delay: 2, ease: "power2.out" }
       );
     }
   }, [videoLoaded]);
-
-  return (
+    return (
     <>
       <div className={`relative h-60 md:h-[79vh] overflow-hidden ${videoLoaded ? 'video-loaded' : ''}`}>
         <img
